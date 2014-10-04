@@ -11,7 +11,7 @@ LEVEL_TAGS = utils.get_level_tags()
 class Announcement(models.Model):
     message = models.TextField(_('Message'))
     level = models.SmallIntegerField(_('Level'), choices=LEVEL_TAGS.items())
-    extra_tags = models.TextField(_('Extra tags'), default='')
+    extra_tags = models.TextField(_('Extra tags'), blank=True)
     is_active = models.BooleanField(_('Is active'), default=True)
 
     crdate = models.DateTimeField(_('Date created'), auto_now_add=True)
