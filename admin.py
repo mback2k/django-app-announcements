@@ -9,6 +9,6 @@ class AnnouncementAdmin(admin.ModelAdmin):
                     'crdate', 'tstamp')
     list_filter = ('level', 'is_active',
                    'crdate', 'tstamp')
-    date_hierarchy = 'crdate'
+    #date_hierarchy = 'crdate'
 
 admin.site.register(Announcement, AnnouncementAdmin)
